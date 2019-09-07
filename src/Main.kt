@@ -1,9 +1,9 @@
 import java.io.File
-import kotlin.system.measureTimeMillis
+import kotlin.system.measureNanoTime
 
 fun main() {
 
-    val problems = File("./src/problems.csv").readLines()
+    val problems = File("./problems.csv").readLines()
     val backtracking = BackTrackingSolver()
 
     problems.map { problem -> problem.split(',').let { Pair(it[0], it[1]) } }
