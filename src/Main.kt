@@ -14,7 +14,7 @@ fun main() {
             )
         }
         .forEach { (board, expected) ->
-            println("========= question ========= \n${board.joinToString("\n") { it.contentToString() }}")
+            println("======== question ======== \n${board.joinToString("\n") { it.contentToString() }}")
             val time = measureNanoTime { backtracking.solve(board) }
             check(board.contentDeepEquals(expected)) { "wrong answer" }
             println("========= answer ========= \n${board.joinToString("\n") { it.contentToString() }}")
