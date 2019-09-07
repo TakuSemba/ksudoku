@@ -18,6 +18,6 @@ fun main() {
             val time = measureNanoTime { backtracking.solve(board) }
             check(board.contentDeepEquals(expected)) { "wrong answer" }
             println("========= answer ========= \n${board.joinToString("\n") { it.contentToString() }}")
-            println("took $time ms")
+            println("took $time ns")
         }
 }
